@@ -1,4 +1,4 @@
-import { Module } from '@munster-dev/core';
+import { Module } from '@monster-js/core';
 import { RootComponent } from './root.logic';
 
 @Module({

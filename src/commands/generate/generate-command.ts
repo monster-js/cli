@@ -8,7 +8,7 @@ import { generateService } from "./actions/generate-service/generate-service";
 
 export function generateCommand(program: Command) {
     const generate = program.command("generate")
-        .description("Generate MunsterJs files");
+        .description("Generate MonsterJS files");
 
     generate.command("component <name>")
         .description("Generate a component files")

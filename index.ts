@@ -7,8 +7,8 @@ import { newCommand } from './src/commands/new/new-command';
 
 const program = new Command();
 
-program.name('MunsterJs Cli')
-    .description('A command-line interface to initialize, develop, scaffold, and maintain MunsterJs applications.')
+program.name('MonsterJS Cli')
+    .description('A command-line interface to initialize, develop, scaffold, and maintain MonsterJS applications.')
     .version(packageJson.version);
 
 newCommand(program);

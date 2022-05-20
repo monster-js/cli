@@ -1,5 +1,5 @@
 import './root.styles.scss';
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component({
     selector: 'app-root',

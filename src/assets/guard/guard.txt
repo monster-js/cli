@@ -1,9 +1,14 @@
-import { BaseGuard, Guard } from '@munster/core';
+import { ObservableInterface } from '@monster-js/core';
+import { Guard } from '@monster-js/router';
 
 @Guard()
-export class __GuardNameCamelCase__Guard extends BaseGuard {
+export class __GuardNameCamelCase__Guard {
 
-    public override canActivate(): boolean {
+    public override canActivate(): ObservableInterface<boolean> | boolean {
+        return true;
+    }
+
+    public override canDeactivate(): ObservableInterface<boolean> | boolean {
         return true;
     }
 

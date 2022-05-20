@@ -1,4 +1,4 @@
-import { Service } from '@munster-dev/core';
+import { Service } from '@monster-js/core';
 
 @Service()
 export class __ServiceNameCamelCase__Service {

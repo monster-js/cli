@@ -1,10 +1,10 @@
 {
-  "name": "munsterjs-app",
+  "name": "monster-js-app",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config ./.configs/webpack.config.js --port 4000 --mode development --env environment=dev",
-    "build": "webpack --config ./.configs/webpack.config.js --mode production --env environment=prod"
+    "start": "webpack serve --port 4000 --config ./.monster/webpack.config.js --env environment=dev",
+    "build": "webpack --config ./.monster/webpack.config.js --env environment=prod"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
@@ -12,7 +12,7 @@
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
-    "@munster-dev/transformer": "^0.0.1",
+    "@monster-js/transformer": "^0.0.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "css-loader": "^6.5.1",
@@ -28,8 +28,8 @@
     "copy-webpack-plugin": "^10.2.4"
   },
   "dependencies": {
-    "@munster-dev/core": "^0.0.39",
-    "@munster-dev/router": "^0.0.5",
-    "@munster-dev/store": "^0.0.3"
+    "@monster-js/core": "^0.0.39",
+    "@monster-js/router": "^0.0.5",
+    "@monster-js/store": "^0.0.3"
   }
 }

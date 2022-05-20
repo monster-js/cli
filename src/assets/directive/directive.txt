@@ -1,4 +1,4 @@
-import { Directive, BaseDirective } from '@munster-dev/core';
+import { Directive, BaseDirective } from '@monster-js/core';
 
 @Directive({
     namespace: '__DirectiveNameKebabCase__'
