@@ -9,11 +9,11 @@ import { logError } from "../../../../utils/log-error";
 import { readFile } from "../../../../utils/read-file";
 import { writeFile } from "../../../../utils/write-file";
 
-export function generateInterface(name: string, options: ObjectInterface) {
+export function generatePipe(name: string, options: ObjectInterface) {
     const baseName = basename(name);
     const config = getConfig();
     const fullDirPath = resolve(process.cwd(), config?.appRootDir || '', name);
-    const fullPath = resolve(`${fullDirPath}.interface.ts`)
+    const fullPath = resolve(`${fullDirPath}.pipe.ts`)
 
     if (!config) {
         return;
@@ -23,14 +23,15 @@ export function generateInterface(name: string, options: ObjectInterface) {
     // if yes, then throw an error
     const fileExists1 = fileExistsChecker(fullPath, `Unable to create new file. ${fullPath} file already exists.`);
     if (fileExists1) {
-        logError('Failed to create new interface.');
+        logError('Failed to create new pipe.');
         return;
     }
 
     // if not, create the files
     const camelCaseName = kebabToCamelCase(`-${baseName}`);
-    const logic = readFile(paths.interface)
-        .replace(/__InterfaceNameCamelCase__/g, camelCaseName);
+    const logic = readFile(paths.pipe)
+        .replace(/__PipeNameKebabCase__/g, baseName)
+        .replace(/__PipeNameCamelCase__/g, camelCaseName);
     writeFile(fullPath, logic);
     logCreate(`${fullPath}`);
 }

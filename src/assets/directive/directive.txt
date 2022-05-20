@@ -1,11 +1,5 @@
-import { Directive, BaseDirective } from '@monster-js/core';
+import { Directive } from '@monster-js/core';
 
-@Directive({
-    namespace: '__DirectiveNameKebabCase__'
-})
-export class __DirectiveNameCamelCase__Directive extends BaseDirective {
-
-    public override onInit(): void {
-    }
-
+@Directive('__DirectiveNameKebabCase__')
+export class __DirectiveNameCamelCase__Directive {
 }

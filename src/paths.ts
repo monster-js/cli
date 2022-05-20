@@ -7,6 +7,7 @@ export const paths = {
     guard: resolver('assets/guard/guard.txt'),
     class: resolver('assets/class/class.txt'),
     directive: resolver('assets/directive/directive.txt'),
+    pipe: resolver('assets/pipe/pipe.txt'),
     interface: resolver('assets/interface/interface.txt'),
     newApp: resolver('assets/starter-app')
 };

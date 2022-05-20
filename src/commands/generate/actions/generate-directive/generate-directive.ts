@@ -13,7 +13,7 @@ export function generateDirective(name: string, options: ObjectInterface) {
     const baseName = basename(name);
     const config = getConfig();
     const fullDirPath = resolve(process.cwd(), config?.appRootDir || '', name);
-    const fullPath = resolve(fullDirPath, `${baseName}.directive.ts`)
+    const fullPath = resolve(`${fullDirPath}.directive.ts`)
 
     if (!config) {
         return;

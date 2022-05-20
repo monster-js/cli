@@ -1,8 +1,7 @@
-import { Module } from "@monster-js/core";
+import { Module, BaseModule } from "@monster-js/module";
 
 @Module({
     components: []
 })
-export class __ModuleNameCamelCase__Module {
-
+export class __ModuleNameCamelCase__Module extends BaseModule {
 }

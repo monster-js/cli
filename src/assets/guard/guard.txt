@@ -4,11 +4,11 @@ import { Guard } from '@monster-js/router';
 @Guard()
 export class __GuardNameCamelCase__Guard {
 
-    public override canActivate(): ObservableInterface<boolean> | boolean {
+    public canActivate(): ObservableInterface<boolean> | boolean {
         return true;
     }
 
-    public override canDeactivate(): ObservableInterface<boolean> | boolean {
+    public canDeactivate(): ObservableInterface<boolean> | boolean {
         return true;
     }
 

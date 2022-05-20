@@ -13,7 +13,8 @@ export function generateService(name: string, options: ObjectInterface) {
     const baseName = basename(name);
     const config = getConfig();
     const fullDirPath = resolve(process.cwd(), config?.appRootDir || '', name);
-    const fullPath = resolve(fullDirPath, `${baseName}.service.ts`)
+    // const fullPath = resolve(fullDirPath, `${baseName}.service.ts`)
+    const fullPath = resolve(`${fullDirPath}.service.ts`)
 
     if (!config) {
         return;
