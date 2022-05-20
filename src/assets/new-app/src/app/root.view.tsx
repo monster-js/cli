@@ -1,1 +1,0 @@
-<h1>Root component works!</h1>
