@@ -8,7 +8,7 @@ export const paths = {
     class: resolver('assets/class/class.txt'),
     directive: resolver('assets/directive/directive.txt'),
     interface: resolver('assets/interface/interface.txt'),
-    newApp: resolver('assets/new-app')
+    newApp: resolver('assets/starter-app')
 };
 
 function resolver(path: string) {
