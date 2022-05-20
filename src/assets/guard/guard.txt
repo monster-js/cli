@@ -1,0 +1,10 @@
+import { BaseGuard, Guard } from '@munster/core';
+
+@Guard()
+export class __GuardNameCamelCase__Guard extends BaseGuard {
+
+    public override canActivate(): boolean {
+        return true;
+    }
+
+}

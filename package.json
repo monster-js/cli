@@ -1,0 +1,38 @@
+{
+  "name": "@munster-dev/cli",
+  "version": "0.0.6",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsc && npm run copy:assets",
+    "watch": "tsc --watch",
+    "copy:assets": "ncp ./src/assets ./dist/src/assets",
+    "patch-version": "npm version patch",
+    "minor-version": "npm version minor",
+    "major-version": "npm version major",
+    "patch-release": "npm run build && npm run patch-version"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mn"
+  ],
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^9.1.0",
+    "ncp": "^2.0.0",
+    "open": "^8.4.0"
+  },
+  "bin": {
+    "mn": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/ncp": "^2.0.5",
+    "@types/node": "^17.0.22",
+    "@types/open": "^6.2.1"
+  }
+}

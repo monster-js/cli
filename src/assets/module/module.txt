@@ -1,0 +1,8 @@
+import { Module } from "@munster-dev/core";
+
+@Module({
+    components: []
+})
+export class __ModuleNameCamelCase__Module {
+
+}

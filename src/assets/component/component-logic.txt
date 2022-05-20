@@ -1,0 +1,9 @@
+import './__ComponentNameKebabCase__.styles.scss';
+import { Component } from '@munster-dev/core';
+
+@Component('app-__ComponentNameKebabCase__')
+export class __ComponentNameCamelCase__ {
+    render() {
+        return <h1>__ComponentNameCamelCase__ component</h1>
+    }
+}

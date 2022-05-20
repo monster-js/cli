@@ -1,0 +1,6 @@
+import { Service } from '@munster-dev/core';
+
+@Service()
+export class __ServiceNameCamelCase__Service {
+
+}

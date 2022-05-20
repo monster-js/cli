@@ -1,0 +1,9 @@
+{
+    "plugins": [
+        "babel-plugin-transform-typescript-metadata",
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        "module:@munster-dev/transformer",
+        "@babel/plugin-transform-runtime"
+    ],
+    "presets": ["@babel/preset-env", "@babel/preset-typescript"]
+}

@@ -1,0 +1,11 @@
+import { Directive, BaseDirective } from '@munster-dev/core';
+
+@Directive({
+    namespace: '__DirectiveNameKebabCase__'
+})
+export class __DirectiveNameCamelCase__Directive extends BaseDirective {
+
+    public override onInit(): void {
+    }
+
+}
