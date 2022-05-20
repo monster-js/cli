@@ -11,7 +11,7 @@
     "patch-version": "npm version patch",
     "minor-version": "npm version minor",
     "major-version": "npm version major",
-    "patch-release": "npm run build && npm run patch-version"
+    "patch-release": "npm run patch-version && npm run build"
   },
   "publishConfig": {
     "access": "public"
