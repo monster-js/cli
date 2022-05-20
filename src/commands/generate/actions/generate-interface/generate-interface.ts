@@ -12,7 +12,7 @@ import { writeFile } from "../../../../utils/write-file";
 export function generateInterface(name: string, options: ObjectInterface) {
     const baseName = basename(name);
     const config = getConfig();
-    const fullDirPath = resolve(process.cwd(), config?.rootDir || '', name);
+    const fullDirPath = resolve(process.cwd(), config?.appRootDir || '', name);
     const fullPath = resolve(fullDirPath, `${baseName}.interface.ts`)
 
     if (!config) {

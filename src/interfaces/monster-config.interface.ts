@@ -1,3 +1,3 @@
 export interface MonsterConfigInterface {
-    rootDir: string;
+    appRootDir: string;
 }

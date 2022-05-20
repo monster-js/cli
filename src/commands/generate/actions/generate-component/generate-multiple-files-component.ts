@@ -12,7 +12,7 @@ import { logError } from '../../../../utils/log-error';
 export function generateMultipleFilesComponent(name: string) {
     const baseName = basename(name);
     const config = getConfig();
-    const fullDirPath = resolve(process.cwd(), config?.rootDir || '', name);
+    const fullDirPath = resolve(process.cwd(), config?.appRootDir || '', name);
     const fullLogicPath = resolve(fullDirPath, `${baseName}.component.tsx`)
     const fullStylePath = resolve(fullDirPath, `${baseName}.styles.scss`)
 
