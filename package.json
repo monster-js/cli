@@ -17,7 +17,7 @@
     "access": "public"
   },
   "keywords": [
-    "mn"
+    "mj"
   ],
   "dependencies": {
     "chalk": "4.1.2",
@@ -26,7 +26,7 @@
     "open": "^8.4.0"
   },
   "bin": {
-    "mn": "./dist/index.js"
+    "mj": "./dist/index.js"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
