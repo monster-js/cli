@@ -6,6 +6,7 @@ import { getConfig } from "../../../../utils/get-config";
 import { kebabToCamelCase } from "../../../../utils/kebab-to-camel-case";
 import { logCreate } from "../../../../utils/log-create";
 import { logError } from "../../../../utils/log-error";
+import { lowercaseFirstLetter } from "../../../../utils/lowercase-first-letter";
 import { readFile } from "../../../../utils/read-file";
 import { writeFile } from "../../../../utils/write-file";
 
@@ -30,7 +31,7 @@ export function generateDirective(name: string, options: ObjectInterface) {
     // if not, create the files
     const camelCaseName = kebabToCamelCase(`-${baseName}`);
     const logic = readFile(paths.directive)
-        .replace(/__DirectiveNameKebabCase__/g, baseName)
+        .replace(/__DirectiveNameKebabCase__/g, lowercaseFirstLetter(camelCaseName))
         .replace(/__DirectiveNameCamelCase__/g, camelCaseName);
     writeFile(fullPath, logic);
     logCreate(`${fullPath}`);
