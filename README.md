@@ -5,9 +5,9 @@ It is not required to use CLI in building MonsterJS applications but we can get 
 
 ## Features
 
-* [Initialize a project](https://monster-js.github.io/docs-v1/docs/cli-create-application)
-* [Generate files](https://monster-js.github.io/docs-v1/docs/cli-generate-commands)
-* [Useful commands](https://monster-js.github.io/docs-v1/docs/cli-useful-commands)
+* [Initialize a project](https://monster-js.org/docs/cli-create-application)
+* [Generate files](https://monster-js.org/docs/cli-generate-commands)
+* [Useful commands](https://monster-js.org/docs/cli-useful-commands)
 
 ## Installation
 
