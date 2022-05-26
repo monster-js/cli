@@ -8,10 +8,8 @@
     "build": "tsc && npm run copy:assets",
     "watch": "tsc --watch",
     "copy:assets": "ncp ./src/assets ./dist/src/assets",
-    "patch-version": "npm version patch",
-    "minor-version": "npm version minor",
-    "major-version": "npm version major",
-    "patch-release": "npm run patch-version && npm run build"
+    "major-release": " npm version major && npm run build",
+    "patch-release": " npm version patch && npm run build"
   },
   "publishConfig": {
     "access": "public"
