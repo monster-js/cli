@@ -1,0 +1,5 @@
+import { Directive } from '@monster-js/core';
+
+@Directive('__DirectiveNameKebabCase__')
+export class __DirectiveNameCamelCase__Directive {
+}

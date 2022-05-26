@@ -1,0 +1,6 @@
+import { Service } from '@monster-js/core';
+
+@Service()
+export class __ServiceNameCamelCase__Service {
+
+}

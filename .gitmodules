@@ -1,0 +1,3 @@
+[submodule "src/assets/starter-app"]
+	path = src/assets/starter-app
+	url = https://github.com/monster-js/starter-app.git
