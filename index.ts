@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 import { Command } from 'commander';
 import packageJson from './package.json';
-import { docsCommand } from './src/commands/docs/docs-commands';
+import { buildCommand } from './src/commands/build/build-command';
+import { docsCommand } from './src/commands/docs/docs-command';
 import { generateCommand } from './src/commands/generate/generate-command';
 import { newCommand } from './src/commands/new/new-command';
 
@@ -14,5 +15,8 @@ program.name('MonsterJS Cli')
 newCommand(program);
 docsCommand(program);
 generateCommand(program);
+buildCommand(program);
 
 program.parse();
+
+// run webpack in nodejs: https://masteringjs.io/tutorials/webpack/node
