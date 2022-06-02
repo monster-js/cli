@@ -5,6 +5,7 @@ import { buildCommand } from './src/commands/build/build-command';
 import { docsCommand } from './src/commands/docs/docs-command';
 import { generateCommand } from './src/commands/generate/generate-command';
 import { newCommand } from './src/commands/new/new-command';
+import { serveCommand } from './src/commands/serve/serve-command';
 
 const program = new Command();
 
@@ -16,6 +17,7 @@ newCommand(program);
 docsCommand(program);
 generateCommand(program);
 buildCommand(program);
+serveCommand(program);
 
 program.parse();
 

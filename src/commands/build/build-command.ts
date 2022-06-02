@@ -6,7 +6,7 @@ import { getWebpackConfig } from "../../utils/get-webpack-config";
 export function buildCommand(program: Command) {
     program.command("build")
         .description("Build your application")
-        .option("--env <value>", "Build the file using specific environment", 'dev')
+        .option("--env <value>", "Build the project using specific environment", 'dev')
         .action((options: ObjectInterface) => {
             const env = options.env;
             const webpackConfig = getWebpackConfig();

@@ -20,7 +20,8 @@
     "commander": "^9.1.0",
     "ncp": "^2.0.0",
     "open": "^8.4.0",
-    "webpack": "^5.72.1"
+    "webpack": "^5.72.1",
+    "webpack-dev-server": "^4.9.1"
   },
   "bin": {
     "mn": "./dist/index.js"
