@@ -10,7 +10,6 @@ export function newCommand(program: Command) {
 
     program.command("new <name>")
         .description("Generate a component files")
-        .option("-s, --single", "To generate a single file component", false)
         .action((name: string, options: ObjectInterface) => {
             const destination = resolve(process.cwd(), name);
             const folderExists = fileExistsChecker(destination, `Unable to generate new app. The folder named ${name} already exists.`);
