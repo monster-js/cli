@@ -36,12 +36,12 @@ export const WebpackConfig = (env: any, args: WebpackConfigArgsInterface = {}) =
         module: {
             rules: [
                 {
-                    test: /(\.css|\.scss|\.sass)$/i,
+                    test: /(\.scss|\.sass)$/i,
                     use: [
-                        require.resolve('@monster-js/transformer/css'),
                         require.resolve('style-loader'),
                         require.resolve('css-loader'),
-                        require.resolve('sass-loader')
+                        require.resolve('sass-loader'),
+                        require.resolve('@monster-js/transformer/css'),
                     ],
                     include: [path.resolve(process.cwd(), 'src')],
                     exclude: [path.resolve(process.cwd(), 'src/assets')]
