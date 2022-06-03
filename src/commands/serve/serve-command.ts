@@ -1,44 +1,25 @@
 import { Command } from "commander";
 import { webpack } from "webpack";
-const WebpackDevServer = require('webpack-dev-server');
+import WebpackDevServer from 'webpack-dev-server';
 import { ObjectInterface } from "../../interfaces/object.interface";
-import { getWebpackConfig } from "../../utils/get-webpack-config";
+import { WebpackConfig } from "../../utils/webapack.config";
 
 export function serveCommand(program: Command) {
     program.command("serve")
         .description("Build your application")
-        .option("--env <value>", "Serve the project using specific environment", 'dev')
-        .option("--port <value>", "Set the port of the local server")
-        .option("--open", "Open a browser when server is ready", false)
+        .option("--env <value>", "Serve the project using the specified environment.", 'dev')
+        .option("--port <value>", "Set the port for the local development server", '4000')
+        .option("--open", "Opens a browser when local development server is ready.", false)
         .action((options: ObjectInterface) => {
             const env = options.env;
-            const webpackConfig = getWebpackConfig();
-            const config = webpackConfig({ environment: env });
+            const config = WebpackConfig({ environment: env });
 
             const compiler = webpack(config);
 
-
-            /**
-             * Setup dev server port
-             */
-            const port = options.port || config.devServer.port || '4000';
-
-            
-            /**
-             * Setup if open a web browser after serve
-             */
-            let open = false;
-            if (options.hasOwnProperty('open')) {
-                open = options.open;
-            } else if(config.devServer?.open) {
-                open = config.devServer.open;
-            }
-
-
             const devServerOptions = {
                 ...config.devServer,
-                open: open,
-                port: port
+                open: options.open,
+                port: options.port
             };
             const server = new WebpackDevServer(devServerOptions, compiler);
 
