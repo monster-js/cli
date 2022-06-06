@@ -59,6 +59,7 @@ export const WebpackConfig = (env: any, args: WebpackConfigArgsInterface = {}) =
                             plugins: [
                                 require.resolve("babel-plugin-transform-typescript-metadata"),
                                 require.resolve("@monster-js/transformer/jsx"),
+                                require.resolve("@monster-js/transformer/component"),
                                 [require.resolve("@babel/plugin-proposal-decorators"), { "legacy": true }],
                                 require.resolve("@babel/plugin-proposal-class-properties"),
                                 require.resolve("@babel/plugin-transform-runtime")
