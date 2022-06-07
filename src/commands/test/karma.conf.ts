@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Tue Jun 07 2022 11:01:25 GMT+0800 (Irkutsk Standard Time)
 
-import { WebpackConfig } from "../../utils/webapack.config";
+import { WebpackConfig } from "../../utils/webpack.config";
 
 export function generateKarmaConfig(webpackEnv: any) {
   const webpackConfig: any = WebpackConfig(webpackEnv, {}, true);
