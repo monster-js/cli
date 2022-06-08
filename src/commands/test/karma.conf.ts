@@ -6,6 +6,7 @@ import { WebpackConfig } from "../../utils/webpack.config";
 export function generateKarmaConfig(webpackEnv: any) {
   const webpackConfig: any = WebpackConfig(webpackEnv, {}, true);
   delete webpackConfig.entry;
+  delete webpackConfig.output.filename;
 
   return {
 
@@ -15,13 +16,14 @@ export function generateKarmaConfig(webpackEnv: any) {
 
     // frameworks to use
     // available frameworks: https://www.npmjs.com/search?q=keywords:karma-adapter
-    frameworks: ['jasmine', 'webpack'],
+    frameworks: ['jasmine', 'webpack', 'iframes'],
 
 
     plugins: [
       'karma-webpack',
       'karma-jasmine',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-iframes'
     ],
 
 
@@ -40,8 +42,8 @@ export function generateKarmaConfig(webpackEnv: any) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
-      'src/**/*.component.tsx': ['webpack'],
-      'src/**/*.test.ts': ['webpack']
+      'src/**/*.component.tsx': ['webpack', 'iframes'],
+      'src/**/*.test.ts': ['webpack', 'iframes']
     },
 
 

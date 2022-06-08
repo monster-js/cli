@@ -1,6 +1,11 @@
 import { ObjectInterface } from "../../../../interfaces/object.interface";
-import { generateMultipleFilesComponent } from "./generate-multiple-files-component";
+import { generateClassComponent } from "./generate-class-component";
+import { generateFunctionComponent } from "./generate-function-component";
 
 export function generateComponent(name: string, options: ObjectInterface) {
-    generateMultipleFilesComponent(name);
+    if (options.function) {
+        generateFunctionComponent(name);
+    } else {
+        generateClassComponent(name);
+    }
 }

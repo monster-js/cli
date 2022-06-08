@@ -1,0 +1,8 @@
+import './__ComponentNameKebabCase__.styles.scss';
+import { fnComponent } from '@monster-js/core';
+
+function __ComponentNameCamelCase__() {
+    return <h1>__ComponentNameCamelCase__ component</h1>
+}
+
+export default fnComponent('app-__ComponentNameKebabCase__', __ComponentNameCamelCase__);
