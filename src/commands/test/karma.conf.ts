@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Tue Jun 07 2022 11:01:25 GMT+0800 (Irkutsk Standard Time)
 
-import { LOG_INFO, LOG_LOG } from "karma/lib/constants";
+import { LOG_INFO } from "karma/lib/constants";
 import { WebpackConfig } from "../../utils/webpack.config";
 
 export function generateKarmaConfig(webpackEnv: any) {
