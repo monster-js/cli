@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tsc --noEmit",
     "build": "tsc && npm run copy:assets",
-    "watch": "tsc --watch",
+    "watch": "npm run build && npm run lint && tsc --watch",
     "copy:assets": "ncp ./src/assets ./dist/src/assets"
   },
   "publishConfig": {

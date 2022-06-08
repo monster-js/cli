@@ -15,6 +15,7 @@ export function generateCommand(program: Command) {
     generate.command("component <name>")
         .description("Generate a component files")
         .option("--function", "Generate a function component file.", false)
+        .option("--noTest", "Generate a component without a test.", false)
         .action(generateComponent);
 
     generate.command("service <name>")
