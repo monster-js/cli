@@ -1,6 +1,7 @@
 // Karma configuration
 // Generated on Tue Jun 07 2022 11:01:25 GMT+0800 (Irkutsk Standard Time)
 
+import { LOG_INFO, LOG_LOG } from "karma/lib/constants";
 import { WebpackConfig } from "../../utils/webpack.config";
 
 export function generateKarmaConfig(webpackEnv: any) {
@@ -63,7 +64,7 @@ export function generateKarmaConfig(webpackEnv: any) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    // logLevel: config.LOG_INFO,
+    logLevel: LOG_INFO,
 
 
     // enable / disable watching file and executing tests whenever any file changes

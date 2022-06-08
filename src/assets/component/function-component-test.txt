@@ -5,11 +5,6 @@ describe('__ComponentNameKebabCase__.component.tsx', function() {
 
     const tester = new ComponentTester(__ComponentNameCamelCase__);
 
-    it('should have the rendered element', function() {
-        const { element } = tester.createComponent();
-        expect(element).toBeTruthy();
-    });
-
     it('should create the component', function() {
         const { component } = tester.createComponent();
         expect(component).toBeTruthy();

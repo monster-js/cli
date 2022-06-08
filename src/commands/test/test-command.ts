@@ -9,12 +9,17 @@ const Server = karma.Server
 export function testCommand(program: Command) {
     program.command("test")
         .description("Test your application")
-        .option("--env <value>", "Serve the project using the specified environment.", 'dev')
+        .option("--env <value>", "Test the project using the specified environment.", 'dev')
+        .option("--watch", "Runs the test and watch for changes.", false)
         .action((options: ObjectInterface) => {
             const webpackConfig = {
                 environment: options.env
             };
-            parseConfig(null, generateKarmaConfig(webpackConfig), {promiseConfig: true, throwErrors: true})
+            const karmaConfig = generateKarmaConfig(webpackConfig);
+
+            karmaConfig.singleRun = !options.watch;
+
+            parseConfig(null, karmaConfig, {promiseConfig: true, throwErrors: true})
                 .then(karmaConfig => {
                     const server = new Server(karmaConfig, function doneCallback(exitCode) {
                         console.log('Karma has exited with ' + exitCode)
