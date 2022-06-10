@@ -1,0 +1,9 @@
+import './__ComponentNameKebabCase__.styles.scss';
+import { ShadowComponent } from '@monster-js/core';
+
+@ShadowComponent('app-__ComponentNameKebabCase__', '__SHADOW_MODE__')
+export class __ComponentNameCamelCase__ {
+    render() {
+        return <h1>__ComponentNameCamelCase__ component</h1>
+    }
+}

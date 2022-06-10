@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import { webpack } from "webpack";
 import { ObjectInterface } from "../../interfaces/object.interface";
-import { WebpackConfig } from "../../utils/webapack.config";
+import { WebpackConfig } from "../../utils/webpack.config";
 
 export function buildCommand(program: Command) {
     program.command("build")

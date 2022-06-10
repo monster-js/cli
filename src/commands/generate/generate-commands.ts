@@ -1,4 +1,4 @@
-import { Command } from "commander";
+import { Command, Option } from "commander";
 import { generateClass } from "./actions/generate-class/generate-class";
 import { generateComponent } from "./actions/generate-component/generate-component";
 import { generateDirective } from "./actions/generate-directive/generate-directive";
@@ -14,6 +14,9 @@ export function generateCommand(program: Command) {
 
     generate.command("component <name>")
         .description("Generate a component files")
+        .option("--function", "Generate a function component file.", false)
+        .option("--noTest", "Generate a component without a test.", false)
+        .addOption(new Option('--shadow <shadow mode>', 'Generate shadow DOM component.').choices(['open', 'closed']))
         .action(generateComponent);
 
     generate.command("service <name>")

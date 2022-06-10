@@ -8,8 +8,11 @@ interface WebpackConfigArgsInterface {
 
 const DEFAULT_OUTPUT = 'dist';
 
-export const WebpackConfig = (env: any, args: WebpackConfigArgsInterface = {}) => {
+export const WebpackConfig = (env: any, args: WebpackConfigArgsInterface = {}, isTesting: boolean = false) => {
     const environment = require(path.resolve(process.cwd(), `src/environments/${env.environment}.json`));
+
+    environment.IS_TESTING = isTesting;
+
     return {
         mode: environment.MODE, // development | production
         entry: './src/index.ts',
