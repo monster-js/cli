@@ -1,0 +1,13 @@
+import __ComponentNameCamelCase__ from './__ComponentNameKebabCase__.component';
+import { createTester } from '@monster-js/tester';
+
+describe('__ComponentNameKebabCase__.component.tsx', function() {
+
+    const tester = createTester(__ComponentNameCamelCase__);
+
+    it('should create the component', function() {
+        const { component } = tester.createComponent();
+        expect(component).toBeTruthy();
+    });
+
+});

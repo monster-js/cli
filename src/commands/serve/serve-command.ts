@@ -2,7 +2,7 @@ import { Command } from "commander";
 import { webpack } from "webpack";
 import WebpackDevServer from 'webpack-dev-server';
 import { ObjectInterface } from "../../interfaces/object.interface";
-import { WebpackConfig } from "../../utils/webapack.config";
+import { WebpackConfig } from "../../utils/webpack.config";
 
 export function serveCommand(program: Command) {
     program.command("serve")
