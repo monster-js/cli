@@ -2,7 +2,7 @@ import { Pipe } from '@monster-js/core';
 
 @Pipe('__PipeNameKebabCase__')
 export class __PipeNameCamelCase__Pipe {
-    transform(value: any, args: any[]) {
+    transform(value: any, args: any[] = []) {
         return '';
     }
 }
