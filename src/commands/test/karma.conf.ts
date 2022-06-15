@@ -30,6 +30,7 @@ export function generateKarmaConfig(webpackEnv: any) {
 
     // list of files / patterns to load in the browser
     files: [
+      require.resolve('@monster-js/core/polyfill'),
       'src/**/*.component.tsx',
       { pattern: 'src/**/*.test.ts', watched: false }
     ],
@@ -43,6 +44,7 @@ export function generateKarmaConfig(webpackEnv: any) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://www.npmjs.com/search?q=keywords:karma-preprocessor
     preprocessors: {
+      [require.resolve('@monster-js/core/polyfill')]: ['webpack'],
       'src/**/*.component.tsx': ['webpack', 'iframes'],
       'src/**/*.test.ts': ['webpack', 'iframes']
     },
