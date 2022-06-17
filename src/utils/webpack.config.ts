@@ -15,7 +15,7 @@ export const WebpackConfig = (env: any, args: WebpackConfigArgsInterface = {}, i
 
     return {
         mode: environment.MODE, // development | production
-        entry: './src/index.ts',
+        entry: [require.resolve('@monster-js/core/polyfill'), './src/index.ts'],
         output: {
             filename: 'index.js',
             path: path.resolve(process.cwd(), args.output || DEFAULT_OUTPUT),
