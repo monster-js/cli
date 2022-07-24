@@ -1,4 +1,3 @@
-import { ObservableInterface } from '@monster-js/core';
 import { Guard } from '@monster-js/router';
 import { Observable } from 'rxjs';
 
